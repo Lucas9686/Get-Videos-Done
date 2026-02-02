@@ -1,0 +1,15 @@
+node_modules/
+out/
+dist/
+.env
+*.mp4
+*.mp3
+*.wav
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.webm
+!assets/manifest.json
+.videoflow/STATE.md
+.videoflow/REVIEW.md
