@@ -26,9 +26,14 @@ unzip -qo /tmp/videoflow.zip -d /tmp/
 
 VFDIR="/tmp/Get-Videos-Done-master"
 
-# Kopiere Dateien
+# Kopiere Dateien (merge mit existierendem .claude Ordner)
 echo "📁 Kopiere Dateien..."
-cp -r "$VFDIR/.claude" .
+mkdir -p .claude/skills
+cp -r "$VFDIR/.claude/agents" .claude/
+cp -r "$VFDIR/.claude/commands" .claude/
+cp -r "$VFDIR/.claude/rules" .claude/
+cp -r "$VFDIR/.claude/skills/"* .claude/skills/
+cp "$VFDIR/.claude/settings.json" .claude/
 cp -r "$VFDIR/templates/src/"* ./src/
 mkdir -p ./public
 cp -r "$VFDIR/public/assets" ./public/

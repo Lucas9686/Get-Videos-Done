@@ -36,9 +36,15 @@ Write-Host "📦 Entpacke..."
 Expand-Archive -Path $zipPath -DestinationPath $tempDir -Force
 $extractedDir = Get-ChildItem $tempDir -Directory | Select-Object -First 1
 
-# Kopiere .claude/
+# Kopiere .claude/ (merge mit existierendem Ordner)
 Write-Host "📁 Kopiere .claude/..."
-Copy-Item -Path "$($extractedDir.FullName)\.claude" -Destination ".\.claude" -Recurse -Force
+New-Item -ItemType Directory -Force -Path ".\.claude" | Out-Null
+Copy-Item -Path "$($extractedDir.FullName)\.claude\agents" -Destination ".\.claude\agents" -Recurse -Force
+Copy-Item -Path "$($extractedDir.FullName)\.claude\commands" -Destination ".\.claude\commands" -Recurse -Force
+Copy-Item -Path "$($extractedDir.FullName)\.claude\rules" -Destination ".\.claude\rules" -Recurse -Force
+New-Item -ItemType Directory -Force -Path ".\.claude\skills" | Out-Null
+Copy-Item -Path "$($extractedDir.FullName)\.claude\skills\*" -Destination ".\.claude\skills" -Recurse -Force
+Copy-Item -Path "$($extractedDir.FullName)\.claude\settings.json" -Destination ".\.claude\settings.json" -Force
 
 # Kopiere templates/src/ nach src/
 Write-Host "📁 Kopiere VideoFlow-Komponenten..."
