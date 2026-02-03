@@ -4,11 +4,9 @@
   "description": "VideoFlow - AI Video Production System powered by kie.ai + ElevenLabs + Remotion",
   "scripts": {
     "start": "npx remotion studio",
-    "build": "npx remotion render src/index.ts MainVideo out/video.mp4",
     "render": "npx remotion render src/index.ts MainVideo out/video.mp4",
     "render:shorts": "npx remotion render src/index.ts MainVideoVertical out/video-shorts.mp4",
-    "render:square": "npx remotion render src/index.ts MainVideoSquare out/video-square.mp4",
-    "preview": "npx remotion preview src/index.ts"
+    "render:square": "npx remotion render src/index.ts MainVideoSquare out/video-square.mp4"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.0",

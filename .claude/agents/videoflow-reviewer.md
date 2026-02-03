@@ -1,7 +1,7 @@
 ---
 name: videoflow-reviewer
 description: Reviews generated video against the original brief for quality, consistency, and completeness. Spawned by user request or after rendering.
-tools: Read, Write, Bash, Glob, Grep
+tools: Read, Write, Glob, Grep
 ---
 
 <role>

@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "event": "Write",
+        "pattern": "src/**/*.ts",
+        "command": "npx tsc --noEmit 2>&1 | head -20"
+      },
+      {
+        "event": "Write",
+        "pattern": "src/**/*.tsx",
+        "command": "npx tsc --noEmit 2>&1 | head -20"
+      },
+      {
+        "event": "Edit",
+        "pattern": "src/**/*.ts",
+        "command": "npx tsc --noEmit 2>&1 | head -20"
+      },
+      {
+        "event": "Edit",
+        "pattern": "src/**/*.tsx",
+        "command": "npx tsc --noEmit 2>&1 | head -20"
+      }
+    ]
+  }
+}

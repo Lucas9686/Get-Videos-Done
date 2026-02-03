@@ -32,16 +32,16 @@ export const videoData = {
     {
       id: 1,
       type: "image" as const, // or "clip"
-      src: require("../assets/images/scene-01.png"),
+      src: "assets/images/scene-01.png",  // use with staticFile()
       durationSeconds: 5,
       text: "Opening title",
-      voiceover: require("../assets/audio/vo-01.mp3"),
+      voiceover: "assets/audio/vo-01.mp3",  // use with staticFile()
       transition: "crossfade",
     },
     // ... more scenes
   ],
   backgroundMusic: {
-    src: require("../assets/audio/music.mp3"),
+    src: "assets/audio/music.mp3",  // use with staticFile()
     volume: 0.2,
   },
 };
@@ -66,6 +66,9 @@ Ensure the composition is valid and listed.
 </execution_flow>
 
 <remotion_patterns>
+
+IMMER `staticFile(path)` für Asset-Pfade verwenden. NIEMALS `require()` oder ES-Imports.
+Beispiel: `<Img src={staticFile("assets/images/scene-01.png")} />`
 
 Use `useCurrentFrame()` and `interpolate()` for animations.
 Use `<Sequence from={frame} durationInFrames={n}>` for timing.
