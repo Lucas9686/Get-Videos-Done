@@ -13,7 +13,7 @@ allowed-tools:
 Generate all audio assets (voiceovers, sound effects) defined in the asset plan.
 
 **Reads:** `.videoflow/ASSET-PLAN.md`, `.videoflow/SCENES.md`
-**Creates:** Files in `assets/audio/`
+**Creates:** Files in `public/assets/audio/`
 **After this command:** Run `/videoflow:compose`
 </objective>
 
@@ -37,12 +37,12 @@ Task(
   2. Model: elevenlabs/text-to-speech-multilingual-v2
   3. Submit via POST https://api.kie.ai/api/v1/jobs/createTask
   4. Poll for completion
-  5. Download to assets/audio/vo-NN.mp3
+  5. Download to public/assets/audio/vo-NN.mp3
 
   For each sound effect needed:
   1. Use elevenlabs/sound-effect-v2
   2. Submit and poll
-  3. Download to assets/audio/sfx-NN.mp3
+  3. Download to public/assets/audio/sfx-NN.mp3
 
   Use the elevenlabs skill for API details and parameters.",
   description="Generate audio assets"

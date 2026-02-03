@@ -372,14 +372,14 @@ Rules:
 
 ## Asset Manifest Tracking
 
-**MANDATORY:** After every successful video download, register the asset in `assets/manifest.json`.
+**MANDATORY:** After every successful video download, register the asset in `public/assets/manifest.json`.
 
 Run this command after each successful download, replacing the UPPERCASE placeholders with actual values:
 
 ```bash
 node -e "
 const fs = require('fs');
-const p = 'assets/manifest.json';
+const p = 'public/assets/manifest.json';
 const m = JSON.parse(fs.readFileSync(p, 'utf8'));
 const entry = {
   id: 'vid-' + String(m.assets.filter(a=>a.type==='video').length+1).padStart(3,'0'),
@@ -406,7 +406,7 @@ console.log('Manifest updated: ' + entry.id + ' (v' + entry.version + ')');
 ```
 
 **Placeholder guide:**
-- `FILENAME`: Relative path, e.g. `assets/clips/scene-01.mp4`
+- `FILENAME`: Relative path for videoData.ts (without public/), e.g. `assets/clips/scene-01.mp4`
 - `PROMPT_JSON_STRING`: The prompt as a JSON string
 - `MODEL_NAME`: e.g. `Veo 3.1`, `Veo 3.1 Fast`, `Runway`, `Kling 2.1`, `Sora 2`
 - `DURATION`: Clip duration in seconds (integer)

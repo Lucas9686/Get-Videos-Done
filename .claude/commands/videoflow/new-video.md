@@ -31,7 +31,7 @@ Create a new video project through creative briefing and scene planning.
 
 2. Create directories:
    ```bash
-   mkdir -p .videoflow assets/images assets/clips assets/audio
+   mkdir -p .videoflow public/assets/images public/assets/clips public/assets/audio
    ```
 
 ## Phase 2: Creative Briefing

@@ -38,13 +38,13 @@ Task(
   - **model**: Best kie.ai model for this scene (see model selection guide below)
   - **prompt**: Optimized English prompt for the AI model (detailed, specific)
   - **aspect_ratio**: Match the video's target ratio
-  - **output_file**: e.g., assets/images/scene-01.png or assets/clips/scene-01.mp4
+  - **output_file**: e.g., public/assets/images/scene-01.png or public/assets/clips/scene-01.mp4
 
   ### Audio Asset (if applicable)
   - **voiceover_text**: Text for TTS
   - **voice**: ElevenLabs voice name
   - **sound_effects**: Description for SFX generation
-  - **output_file**: e.g., assets/audio/vo-01.mp3
+  - **output_file**: e.g., public/assets/audio/vo-01.mp3
 
   Model Selection Guide:
   - Static scenes with text overlay → Image (4o Image or Flux Kontext)

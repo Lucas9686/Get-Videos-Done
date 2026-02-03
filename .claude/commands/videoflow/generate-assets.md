@@ -13,7 +13,7 @@ allowed-tools:
 Generate all images and video clips defined in ASSET-PLAN.md using the kie.ai API. Runs generations in parallel where possible.
 
 **Reads:** `.videoflow/ASSET-PLAN.md`
-**Creates:** Files in `assets/images/` and `assets/clips/`
+**Creates:** Files in `public/assets/images/` and `public/assets/clips/`
 **After this command:** Run `/videoflow:generate-audio` then `/videoflow:compose`
 </objective>
 
@@ -65,7 +65,7 @@ Launch multiple agents in parallel for independent scenes.
 
 Check all expected files exist:
 ```bash
-ls -la assets/images/ assets/clips/
+ls -la public/assets/images/ public/assets/clips/
 ```
 
 Compare against ASSET-PLAN.md. For each missing asset:

@@ -288,14 +288,14 @@ sketch, digital art, flat colors
 
 ## Asset Manifest Tracking
 
-**MANDATORY:** After every successful image download, register the asset in `assets/manifest.json`.
+**MANDATORY:** After every successful image download, register the asset in `public/assets/manifest.json`.
 
 Run this command after each successful download, replacing the UPPERCASE placeholders with actual values:
 
 ```bash
 node -e "
 const fs = require('fs');
-const p = 'assets/manifest.json';
+const p = 'public/assets/manifest.json';
 const m = JSON.parse(fs.readFileSync(p, 'utf8'));
 const entry = {
   id: 'img-' + String(m.assets.filter(a=>a.type==='image').length+1).padStart(3,'0'),
@@ -322,7 +322,7 @@ console.log('Manifest updated: ' + entry.id + ' (v' + entry.version + ')');
 ```
 
 **Placeholder guide:**
-- `FILENAME`: Relative path, e.g. `assets/images/scene-01.png`
+- `FILENAME`: Relative path for videoData.ts (without public/), e.g. `assets/images/scene-01.png`
 - `PROMPT_JSON_STRING`: The prompt as a JSON string (use `JSON.stringify()` if it contains quotes)
 - `MODEL_NAME`: e.g. `4o Image`, `Flux Kontext Max`, `Imagen 4`, `Seedream 4.5`
 - `SIZE_OR_RATIO`: e.g. `3:2`, `16:9`, `1:1`

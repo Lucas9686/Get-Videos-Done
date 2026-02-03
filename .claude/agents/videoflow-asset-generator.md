@@ -63,7 +63,7 @@ Poll every 5 seconds. When status is `success`, extract URL from `resultJson`.
 
 Use curl to download the generated file:
 ```bash
-curl -o "assets/images/scene-01.png" "RESULT_URL"
+curl -o "public/assets/images/scene-01.png" "RESULT_URL"
 ```
 
 ## Step 6: Report

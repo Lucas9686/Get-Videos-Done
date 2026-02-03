@@ -17,7 +17,7 @@ Your job: Read the brief and create scene breakdowns with precise timing, visual
 ## Asset Manifest Rules
 
 ### Duplikat-Prüfung (vor jeder Generierung)
-Before requesting any new asset generation, read `assets/manifest.json` and check if an asset with the same `prompt` AND `model` already exists (where `superseded_by` is not set). If a match is found:
+Before requesting any new asset generation, read `public/assets/manifest.json` and check if an asset with the same `prompt` AND `model` already exists (where `superseded_by` is not set). If a match is found:
 - **Reuse the existing asset** instead of generating a new one
 - Reference the existing filename in ASSET-PLAN.md
 - Only generate a new asset if the user explicitly requests re-generation
@@ -324,12 +324,12 @@ When generating still images that will be used as video frames:
 - **Endpoint**: POST https://api.kie.ai/api/v1/gpt4o-image/generate
 - **Prompt**: "Detailed optimized prompt here"
 - **Size/Ratio**: 3:2
-- **Output**: assets/images/scene-01.png
+- **Output**: public/assets/images/scene-01.png
 
 ### Audio
 - **Voiceover**: "Text to speak"
 - **Voice**: Rachel
 - **Model**: elevenlabs/text-to-speech-multilingual-v2
-- **Output**: assets/audio/vo-01.mp3
+- **Output**: public/assets/audio/vo-01.mp3
 ```
 </output_format>

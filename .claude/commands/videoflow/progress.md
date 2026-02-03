@@ -21,9 +21,9 @@ cat .videoflow/STATE.md 2>/dev/null || echo "No video project found. Run /videof
 ## Check Assets
 
 ```bash
-echo "=== Images ===" && ls assets/images/ 2>/dev/null || echo "None"
-echo "=== Clips ===" && ls assets/clips/ 2>/dev/null || echo "None"
-echo "=== Audio ===" && ls assets/audio/ 2>/dev/null || echo "None"
+echo "=== Images ===" && ls public/assets/images/ 2>/dev/null || echo "None"
+echo "=== Clips ===" && ls public/assets/clips/ 2>/dev/null || echo "None"
+echo "=== Audio ===" && ls public/assets/audio/ 2>/dev/null || echo "None"
 echo "=== Output ===" && ls out/ 2>/dev/null || echo "None"
 ```
 

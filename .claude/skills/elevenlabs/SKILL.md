@@ -303,14 +303,14 @@ Use industry terms for better results: impact, whoosh, ambience, one-shot, loop,
 
 ## Asset Manifest Tracking
 
-**MANDATORY:** After every successful audio download, register the asset in `assets/manifest.json`.
+**MANDATORY:** After every successful audio download, register the asset in `public/assets/manifest.json`.
 
 Run this command after each successful download, replacing the UPPERCASE placeholders with actual values:
 
 ```bash
 node -e "
 const fs = require('fs');
-const p = 'assets/manifest.json';
+const p = 'public/assets/manifest.json';
 const m = JSON.parse(fs.readFileSync(p, 'utf8'));
 const entry = {
   id: 'aud-' + String(m.assets.filter(a=>a.type==='audio').length+1).padStart(3,'0'),
@@ -337,7 +337,7 @@ console.log('Manifest updated: ' + entry.id + ' (v' + entry.version + ')');
 ```
 
 **Placeholder guide:**
-- `FILENAME`: Relative path, e.g. `assets/audio/vo-01.mp3`
+- `FILENAME`: Relative path for videoData.ts (without public/), e.g. `assets/audio/vo-01.mp3`
 - `PROMPT_JSON_STRING`: The text/dialogue content as a JSON string
 - `MODEL_NAME`: e.g. `elevenlabs/text-to-speech-multilingual-v2`, `elevenlabs/text-to-dialogue-v3`, `elevenlabs/sound-effect-v2`
 - `VOICE`: Voice name (e.g. `Rachel`, `Adam`) or `null` for sound effects

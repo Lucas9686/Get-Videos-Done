@@ -30,7 +30,7 @@ Task(
   1. Read .videoflow/BRIEF.md for the original vision
   2. Read .videoflow/SCENES.md for expected scenes
   3. Read .videoflow/ASSET-PLAN.md for expected assets
-  4. Check all files in assets/images/, assets/clips/, assets/audio/
+  4. Check all files in public/assets/images/, public/assets/clips/, public/assets/audio/
   5. Review src/videoData.ts and src/Video.tsx for composition correctness
   6. Compare everything against the brief
   7. Write .videoflow/REVIEW.md with findings

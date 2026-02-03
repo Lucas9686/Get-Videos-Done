@@ -56,7 +56,7 @@ curl -s -X POST "https://api.kie.ai/api/v1/jobs/createTask" \
 
 ## Step 4: Poll and Download
 
-Poll each task. On success, download to `assets/audio/`.
+Poll each task. On success, download to `public/assets/audio/`.
 
 ## Step 5: Report
 
@@ -113,7 +113,7 @@ Select the factor based on the `style` in BRIEF.md (calm/neutral/energetic).
 ## Voice Consistency Protocol
 
 1. **Same narrator = same parameters everywhere.** Define voice name + stability + similarity_boost + style once in ASSET-PLAN.md. Use those exact values for ALL voiceover scenes.
-2. **Always request timestamps.** Add `"timestamps": true` to every voiceover request. Save timestamps to `assets/audio/vo-NN-timestamps.json` alongside the audio file.
+2. **Always request timestamps.** Add `"timestamps": true` to every voiceover request. Save timestamps to `public/assets/audio/vo-NN-timestamps.json` alongside the audio file.
 3. **Consistent speed.** Do not vary the speed parameter between scenes for the same narrator unless the brief explicitly calls for pacing changes.
 
 </consistency_rules>

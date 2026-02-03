@@ -24,12 +24,14 @@ Verwende die `/videoflow:*` Slash-Commands:
 
 - `src/` – Remotion React-Komponenten
 - `src/videoData.ts` – Szenen-Daten (generiert von /videoflow:compose)
-- `assets/images/` – KI-generierte Bilder
-- `assets/clips/` – KI-generierte Video-Clips
-- `assets/audio/` – Voiceovers, Sound-Effekte, Musik
-- `assets/manifest.json` – Asset-Versionierung und Tracking
+- `public/assets/images/` – KI-generierte Bilder
+- `public/assets/clips/` – KI-generierte Video-Clips
+- `public/assets/audio/` – Voiceovers, Sound-Effekte, Musik
+- `public/assets/manifest.json` – Asset-Versionierung und Tracking
 - `.videoflow/` – Projektstatus (BRIEF.md, SCENES.md, ASSET-PLAN.md)
 - `out/` – Gerenderte Videos
+
+**Wichtig:** Assets werden in `public/assets/` gespeichert, aber in `videoData.ts` und `staticFile()` ohne `public/` Prefix referenziert (z.B. `staticFile("assets/images/scene-01.png")`).
 
 ## NPM Commands
 
